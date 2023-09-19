@@ -1,0 +1,167 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #404040;
+    user-select: none;
+}
+
+/* Text */
+
+h1 {
+    font-size: 2.5em;
+    font-weight: 400;
+}
+
+.hint-text{
+    font-size: 1.3rem;
+}
+
+.join{
+    font-weight: 900;
+    color: white;
+    text-transform: uppercase;
+    margin: 0 auto;
+    padding-top: .5em;
+}
+
+h2{
+    font-size: 2rem;
+}
+
+.register{
+    color: green;
+    text-transform: uppercase;
+}
+
+.main-content p{
+    font-size: 1.2rem;
+}
+
+p.fine-print{
+    color: gray;
+    font-size: .8rem;
+}
+
+/* flex containers */
+
+.intro,
+.main-content {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1.3em;
+}
+
+.intro {
+    align-items: center;
+    background-image: url("images/healthy-habits.png");
+    background-size: cover;
+    color: black;
+    min-height: 250px;
+    text-align: center;
+    color: white;
+    justify-content: space-between;
+    padding-bottom: 1.5em;
+}
+
+.main-content {
+    align-items: center;
+    padding: 0 1.5em;
+}
+
+
+.main-content p,
+form {
+    max-width: 450px;
+}
+
+.main-content p{
+    text-align: left;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input{
+    text-align: center;
+    margin-bottom: .7em;
+    padding: .5em;
+    border: 2px solid green;
+    border-radius: 5px;
+}
+
+input:focus {
+    outline: none;
+    border-color: green;
+    background-color: lightgreen;
+}
+
+input,
+button {
+    font-family: inherit;
+    border-radius: 5px; 
+}
+
+.btn {
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 1px;
+    padding: 1em 0;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    color: white;
+    background-color: #8a71ec;
+    margin-top: 1em;
+    background-color: green;   
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: lightgreen;
+}
+
+p.fine-print{
+    text-align: center;
+}
+
+@media (min-width: 550px){
+    body{
+        display: flex;
+    }
+    
+    .intro,
+    .main-content{
+        justify-content: space-between;
+        width: 50%;
+    }
+    
+    .intro{
+        padding: 0 1em;
+        min-height: 100vh;
+    }
+    
+    
+    .hint-text{
+        padding-bottom: .7em;
+        font-size: 2vw;
+    }
+    
+    h1{
+        font-size: 4.5vw;
+    }
+    
+    .join{
+        text-align: center;
+        font-size: 1.5vw;
+        order: -1;
+        border-top: 5px solid white;
+    }
+}
